@@ -115,6 +115,9 @@ def send_sticker(message):
     bot.send_sticker(message.chat.id, FILE_ID)
     #print(message)
 
+@bot.message_handler(commands=['about'])
+def send_about(message):
+    bot.send_message(message.chat.id, "Университет искуственного интеллекта \n Anastasia Makarova (C)")
 
 
 bot.polling()
